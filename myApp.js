@@ -1,0 +1,1 @@
+var myApp = angular.module("listaObecnosci", ['ui.bootstrap', 'angular.filter']);

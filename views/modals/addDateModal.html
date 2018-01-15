@@ -1,0 +1,33 @@
+<div class="blackboard" ng-controller="usersCtrl">
+
+	<div class="modal-header">
+		<h4 class="modal-title">Nowy dzień</h4>
+	</div>
+
+	<form name="addDateForm" novalidate>
+		<div class="modal-body">
+			<div class="form-group">
+				<label for="day">Dzień:</label>
+				<input type="number" class="form-control" name="day" ng-model="newDate.day" required>
+				<span class="text-danger" ng-show="addDateForm.day.$error.required">* Pole obowiązkowe</span>
+			</div>
+			<div class="form-group">
+				<label for="month">Miesiąc:</label>
+    	    	<input type="text" class="form-control" name="name" ng-model="newDate.month" required>
+    	    	<span class="text-danger" ng-show="addDateForm.month.$error.required">* Pole obowiązkowe</span>
+    		</div>
+    		<div class="form-group">
+    		    <label for="year">Rok:</label>
+    		    <input type="text" class="form-control" name="year" ng-model="newDate.year" required>
+    		    <span class="text-danger" ng-show="addDateForm.year.$error.required">* Pole obowiązkowe</span>
+    		</div>
+		</div>
+	</form>
+	
+	<div class="modal-footer">
+		<div class="btn btn-default" ng-click="cancel()" id="button">Anuluj</div>
+		<button class="btn btn-default" ng-disabled="addDateForm.$invalid" ng-click="save(); 
+		addDate(newDate.day, newDate.month, newDate.year);"  id="button" type='submit'>Dodaj</button>
+	</div>
+
+</div>

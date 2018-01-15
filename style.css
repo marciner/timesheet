@@ -1,0 +1,80 @@
+@font-face {
+    font-family: headerFont;
+    src: url("fonts/orange juice 2.0.ttf");
+}
+
+@font-face {
+    font-family: bodyFont;
+    src: url("fonts/Karvwood.otf");
+}
+
+body {
+	background-image: url("chalk-board.jpg");
+	font-family: bodyFont;
+	font-size: 16px;
+	color: white;
+}
+
+
+h1 {
+	font-family: headerFont;
+	font-size: 6em;
+}
+
+h2 {
+	font-size: 4em;
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+.modal-content{
+	 background-image: url("chalk-board.jpg");
+	 background-color: Transparent;
+}
+
+.stats{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.btns{
+	margin-bottom: 50px;
+}
+
+.btn-default, .ng-dirty, .ng-invalid, .ng-required, .btn-default:focus, 
+.btn-default.disabled, .btn-default[disabled], .btn-default[disabled]:hover, 
+.ng-untouched, .form-control[disabled], .btn.active.focus, .btn-active:focus, .btn.focus, .btn:active.focus, .btn:active:focus,
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default,
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, 
+.btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, 
+.open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, 
+.open>.dropdown-toggle.btn-default:hover{
+	background-color: Transparent;
+	background-image: none;
+	border: none;
+	color: white;
+	text-shadow: none;
+	box-shadow: none;
+	outline: none;
+}
+
+.btn-default:hover, .open{
+	background-color: Transparent;
+	background-image: none;
+	border: none;
+	color: white;
+	text-shadow: none;
+	box-shadow: none;
+	text-decoration: underline;
+}
+
+option{
+	color: black;
+}
+
+.days h2{
+	 font-family: headerFont;
+
+}
+

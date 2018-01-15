@@ -1,0 +1,42 @@
+<div class="blackboard" ng-controller="usersCtrl">
+
+	<div class="modal-header">
+		<h4 class="modal-title">Nowy uczestnik</h4>
+	</div>
+<!-- <div ng-controller="daysCtrl"> -->
+	<form name="addUserForm" novalidate>
+		<div class="modal-body">
+			<div class="form-group">
+				<label for="id">Liczba porządkowa:</label>
+				<input type="number" class="form-control" name="id" ng-model="ussersInfo.id" required>
+				<span class="text-danger" ng-show="addUserForm.id.$error.required">* Pole obowiązkowe</span>
+			</div>
+			<div class="form-group">
+				<label for="name">Imię:</label>
+    	    	<input type="text" class="form-control" name="name" ng-model="ussersInfo.name" required>
+    	    	<span class="text-danger" ng-show="addUserForm.name.$error.required">* Pole obowiązkowe</span>
+    		</div>
+    		<div class="form-group">
+    		    <label for="name">Nazwisko:</label>
+    		    <input type="text" class="form-control" name="surname" ng-model="ussersInfo.surname" required>
+    		    <span class="text-danger" ng-show="addUserForm.surname.$error.required">* Pole obowiązkowe</span>
+    		</div>
+    		<div class="form-group">
+    		    <label for="presence">Obecny?</label>
+    		    <select id="actionLocation" class="form-control" name="presence" ng-model="ussersInfo.presence" required>
+					<option>Tak</option>
+					<option>Nie</option>
+				</select>
+				<span class="text-danger" ng-show="addUserForm.presence.$error.required">* Pole obowiązkowe</span>
+			</div>
+			<input type="text" class="form-control" name="date" ng-model="entity" >
+		</div>
+	</form>
+	
+	<div class="modal-footer">
+		<div class="btn btn-default" ng-click="cancel()" id="button">Anuluj</div>
+		<button class="btn btn-default" ng-disabled="addUserForm.$invalid" ng-click="save(); 
+		addUser(ussersInfo.id, ussersInfo.name, ussersInfo.surname, ussersInfo.presence, entity);"  id="button" type='submit'>Dodaj</button>
+	</div>
+<!-- </div> -->
+</div>

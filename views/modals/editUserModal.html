@@ -1,0 +1,42 @@
+<div ng-controller="usersCtrl">
+
+	<div class="modal-header">
+		<h4 class="modal-title">Edycja uczestnika</h4>
+	</div>
+
+	<form name="editUserForm" novalidate>
+		<div class="modal-body">
+			<div class="form-group">
+				<label for="id">Liczba porządkowa:</label>
+				<input type="text" class="form-control" name="id" ng-model="entity.id" required ng-disabled="true">
+				<span class="text-danger" ng-show="editUserForm.id.$error.required">* Pole obowiązkowe</span>
+			</div>
+			<div class="form-group">
+				<label for="name">Imię:</label>
+    	    	<input type="text" class="form-control" name="name" ng-model="entity.name" required>
+    		    <span class="text-danger" ng-show="editUserForm.name.$error.required">* Pole obowiązkowe</span>
+    		</div>
+    		<div class="form-group">
+    	    	<label for="name">Nazwisko:</label>
+    	    	<input type="text" class="form-control" name="surname" ng-model="entity.surname" required>
+    	    	<span class="text-danger" ng-show="editUserForm.surname.$error.required">* Pole obowiązkowe</span>
+    		</div>
+    		<div class="form-group">
+    	    	<label for="presence">Obecny?</label>
+    	    	<select id="actionLocation" class="form-control" name="presence" ng-model="entity.presence" required>
+					<option>Tak</option>
+					<option>Nie</option>
+				</select>
+				<span class="text-danger" ng-show="editUserForm.presence.$error.required">* Pole obowiązkowe</span>
+			</div>
+			<input type="text" class="form-control" name="surname" ng-model="entity.date">
+		</div>
+	</form>
+	
+	<div class="modal-footer">
+		<div class="btn btn-default" ng-click="cancel()" id="button">Anuluj</div>
+		<button class="btn btn-default" ng-disabled="editUserForm.$invalid" ng-click="save(); 
+		updateUser(entity);"  id="button" type='submit'>Zapisz</button>
+	</div>
+
+</div>
